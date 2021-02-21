@@ -1,0 +1,35 @@
+.friendFlex {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+
+.avatar {
+  margin-right: 30px;
+  padding: 10px;
+  width: 100px;
+  max-width: 100%;
+  border-radius: 10%;
+  background-color: dodgerblue;
+}
+
+.name {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.status {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.status.online {
+  background-color: rgb(52, 179, 52);
+}
+
+.status.offline {
+  background-color: tomato;
+}

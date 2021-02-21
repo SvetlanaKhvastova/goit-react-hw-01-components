@@ -1,0 +1,33 @@
+.transactionHistory {
+  border-spacing: 2px;
+  table-layout: fixed;
+  min-width: 650px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+tr,
+td,
+th {
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+th {
+  text-transform: uppercase;
+  color: white;
+  background-color: rgb(6, 110, 228);
+}
+
+tr:nth-child(even) {
+  background-color: rgb(0, 119, 255, 0.1);
+}
+
+td {
+  text-transform: capitalize;
+  color: rgb(85, 83, 83);
+}

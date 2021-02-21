@@ -1,0 +1,21 @@
+.statList {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.item {
+  padding: 15px;
+  width: 100%;
+  border: 1px solid rgb(141, 137, 137, 0.5);
+}
+
+span {
+  display: block;
+}
+
+.label {
+  margin-bottom: 10px;
+}
