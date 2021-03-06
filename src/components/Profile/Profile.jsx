@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import s from './Profile.module.css';
 
@@ -12,20 +11,55 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
         <p className={s.location}>{location}</p>
       </div>
 
-      <ul className={s.stats}>
-        <li className={s.statsList}>
-          <span className={s.label}>Followers </span>
-          <span className={s.quantity}>{stats.followers}</span>
-        </li>
-        <li className={s.statsList}>
-          <span className={s.label}>Views </span>
-          <span className={s.quantity}>{stats.views}</span>
-        </li>
-        <li className={s.statsList}>
-          <span className={s.label}>Likes </span>
-          <span className={s.quantity}>{stats.likes}</span>
-        </li>
-      </ul>
+      {/* {stats && (
+        <ul className={s.stats}>
+          <li className={s.statsList}>
+            <span className={s.label}>Followers </span>
+            <span className={s.quantity}>
+              {stats.followers ? stats.followers : 0}
+            </span>
+          </li>
+          <li className={s.statsList}>
+            <span className={s.label}>Views </span>
+            <span className={s.quantity}>{stats.views ? stats.views : 0}</span>
+          </li>
+          <li className={s.statsList}>
+            <span className={s.label}>Likes </span>
+            <span className={s.quantity}>{stats.likes ? stats.likes : 0}</span>
+          </li>
+        </ul>
+      )} */}
+      {/* {stats && (
+        <ul className={s.stats}>
+          {console.log(stats)}
+          {stats.map(el => {
+            console.log(Object.keys(el));
+            console.log(Object.values(el));
+            return (
+              <li className={s.statsList}>
+                <span className={s.label}>{Object.keys(el)} </span>
+                <span className={s.quantity}>
+                  {Object.values(el) ? Object.values(el) : 0}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      )} */}
+
+      {stats && (
+        <ul className={s.stats}>
+          {Object.entries(stats).map(el => {
+            console.log(el);
+            return (
+              <li className={s.statsList} key={el[0]}>
+                <span className={s.label}>{el[0]} </span>
+                <span className={s.quantity}>{el[1] ? el[1] : 0}</span>
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </div>
   );
 };

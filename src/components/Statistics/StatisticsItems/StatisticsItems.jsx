@@ -12,16 +12,17 @@ const StatisticsItems = ({ stats }) => {
   return (
     <>
       <ul className={s.statList}>
-        {stats.map(item => (
-          <li
-            className={s.item}
-            key={item.id}
-            style={{ backgroundColor: randomColor() }}
-          >
-            <span className={s.label}>{item.label} </span>
-            <span className={s.percentage}>{item.percentage}%</span>
-          </li>
-        ))}
+        {stats &&
+          stats.map(item => (
+            <li
+              className={s.item}
+              key={item.id}
+              style={{ backgroundColor: randomColor() }}
+            >
+              <span className={s.label}>{item.label} </span>
+              <span className={s.percentage}>{item.percentage}%</span>
+            </li>
+          ))}
       </ul>
     </>
   );

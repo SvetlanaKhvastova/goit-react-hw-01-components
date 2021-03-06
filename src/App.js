@@ -1,6 +1,6 @@
 import './App.css';
 
-import Profile from './components/Profile/Profile';
+import Profile from './components/Profile';
 import user from './components/Profile/user.json';
 
 import Statistics from './components/Statistics/Statistics';
